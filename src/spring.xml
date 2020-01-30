@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean class="com.task.Fuel" id="fuel">
+<constructor-arg value="2"/>
+</bean>
+
+<bean class="com.task.Sattalite" id="sattalite">
+<property name ="Lanched" value="12"/>
+<property name ="Locations" value="genaralkota"/>
+</bean>
+
+
+
+<bean class="com.task.Rocket" >
+<constructor-arg ref="fuel"/>
+<property name ="sat" ref="sattalite"/>
+<property name ="countryName" ref="India"/>
+  </bean>
+  
+  <bean class="com.task.TheadImpl" id="">
+  </bean>
+  <bean class="com.task.Labour" id="">
+  <constructor-arg value="jhcks"/>
+  <property name ="experience" ref="12"/>
+  <property name ="TheadImpl" ref="theadImpl"/>
+  </bean>
+</beans>
